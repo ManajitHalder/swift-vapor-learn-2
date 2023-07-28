@@ -75,7 +75,9 @@ final class ArticleModel: Model {
         self.tags = tags
     }
     
-    
+    init(status: StatusEnum.RawValue?) {
+        self.status = status
+    }
 }
 
 extension ArticleModel: Content {
