@@ -53,10 +53,10 @@ final class CourseModel: Model {
     @OptionalField(key: FieldKeys.author)
     var author: String?
     
-    @OptionalField(key: FieldKeys.createdAt)
+    @Timestamp(key: FieldKeys.createdAt, on: .create)
     var createdAt: Date?
     
-    @OptionalField(key: FieldKeys.updatedAt)
+    @Timestamp(key: FieldKeys.updatedAt, on: .update)
     var updatedAt: Date?
     
     @OptionalField(key: FieldKeys.publishDate)
